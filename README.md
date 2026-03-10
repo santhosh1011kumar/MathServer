@@ -44,6 +44,7 @@ Publish the website in Localhost.
 
 ## PROGRAM:
 ## views.py:
+```
 from django.shortcuts import render
 
 def gst_amt_calculator(request):
@@ -68,9 +69,10 @@ def gst_amt_calculator(request):
         'gst_amt': gst_amt
     }
     return render(request,'math.html', context)
-
+```
 
 ## urls.py:
+```
 from django.contrib import admin
 from django.urls import path, include
 from mathapp import views
@@ -80,8 +82,9 @@ urlpatterns = [
     path('', views.gst_amt_calculator, name='gst_amt'),
 ]
 
-
+```
 ## math.html:
+```
 
 <!DOCTYPE html>
 <html>
@@ -197,7 +200,7 @@ urlpatterns = [
 
 </body>
 </html>
-
+```
 
 ## OUTPUT - SERVER SIDE:
 ![alt text](<Screenshot 2026-03-09 091429.png>)
